@@ -15,14 +15,11 @@ coverage.out
 
 
 # Environment and secrets
-.env
-.env.local
 .env.*.local
 .jwt-secret
 
 # IDE
 .idea/
-.vscode/
 *.swp
 *.swo
 *~
@@ -84,3 +81,4 @@ fix-*/
 work-fix-*/
 worktrees/
 fix-11638-worktree/
+config.bat

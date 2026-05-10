@@ -5,9 +5,9 @@
   "license": "Apache-2.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "dev:coverage": "VITE_COVERAGE=true vite",
-    "build": "tsc -b && vite build",
+    "dev": "node init && vite",
+    "dev:coverage": "node init && VITE_COVERAGE=true vite",
+    "build": "node init && tsc -b && vite build",
     "postbuild": "node scripts/check-vendor-safety.mjs",
     "lint": "eslint .",
     "preview": "vite preview",
@@ -45,7 +45,7 @@
     "coverage:clean": "rimraf .nyc_output coverage",
     "test:card-registry": "node ../scripts/card-registry-integrity-test.mjs",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
+    "build-storybook": "node init && storybook build",
     "test:visual": "playwright test --config e2e/visual/app-visual.config.ts",
     "test:visual:update": "playwright test --config e2e/visual/app-visual.config.ts --update-snapshots"
   },
